@@ -1,17 +1,17 @@
-import { ExampleScene } from "./scenes/ExampleScene";
-import { Game } from "phaser"
+import { Game, Types } from "phaser";
+import { Level1 } from "./scenes/level1";
 
-const config: Phaser.Types.Core.GameConfiguration = {
+const config: Types.Core.GameConfig = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
-  scene: ExampleScene,
+  scene: Level1,
   physics: {
-    default: 'arcade',
+    default: "arcade",
     arcade: {
-      gravity: { y: 200 }
-    }
-  }
+      gravity: { x: 0, y: 200 },
+    },
+  },
 };
 
 const game = new Game(config);
